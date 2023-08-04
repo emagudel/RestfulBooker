@@ -1,39 +1,38 @@
 # demo-api-testing
 
-This is a very simple API you can use for learning API Testing. It is built using express and nodejs. It stores data into a JSON File stored under "database" folder with the name "PFMembers.json". There are seven endpoints in this api.
-
+Esta es una API muy simple que puedes usar para aprender API Testing. Está construida usando express y nodejs. Almacena los datos en un archivo JSON almacenado en la carpeta "database" con el nombre "PFMembers.json". Hay siete puntos finales en esta API.
 1. ### Members - http://localhost:5002/api/members
-    * GET ALL (/) - This will return all the members. You can also use query parameter to filter out based on gender.
-    * GET (/ID) - You can retrieve a specific member based on it's ID.
-    * POST (/) - You can POST a new members into PFMembers.json file.
-    * PUT (/ID) - You can UPDATE an existing member into PFMembers.json file by providing BOTH NAME and GENDER.
-    * PATCH (/ID) - You can UPDATE an existing member into PFMembers.json file by providing either NAME or GENDER or BOTH.
-    * DELETE (/ID) - You can DELETE an existing member into PFMembers.json file.
-    * Both JSON and XML responses are available.
-2. ### File Upload - http://localhost:5002/api/upload
-    * POST (/) - You can POST a new FILE into fileuploads folder.
-3. ### File Download - http://localhost:5002/api/download?name=FileNameWithExtension
-    * GET (/) - You can download a FILE. e.g. http://localhost:5002/api/download?name=Test.jpg
-4. ### Delayed Response - http://localhost:5002/api/lag?delay=TimeInMilliSeconds
-    * Change TimeInMilliSeconds with Appropriate Value e.g. http://localhost:5002/api/lag?delay=3000 would delay the response by 3 Seconds
-5. ### Mandatory Header in the Request - http://localhost:5002/api/sendheader
-    * Error if channelName header is not set in the Request Object.
-6. ### Vehicles - http://localhost:5002/api/vehicles
-    * GET ALL (/) - This will return all the vehicles. 
-7. ### Authors - http://localhost:5002/api/authors
-    * GET ALL (/) - This will return all the authors. 
-8. ### INSTALLATION STEPS
-      * Install node.js
-      * Install VS Code as IDE
-      * Install nodemon globally by opening terminal and running the following command : -
+    * GET ALL (/) - Esto devolverá todos los miembros. También puede utilizar el parámetro de consulta para filtrar en función del sexo.
+    * GET (/ID) - Puede recuperar un miembro específico basado en su ID.
+    * POST (/) - Puede enviar un nuevo miembro al archivo PFMembers.json.
+    * PUT (/ID) - Puede ACTUALIZAR un miembro existente en el archivo PFMembers.json proporcionando TANTO NOMBRE como GÉNERO.
+    * PATCH (/ID) - Puede ACTUALIZAR un miembro existente en el archivo PFMembers.json proporcionando NOMBRE o GÉNERO o AMBOS.
+    * DELETE (/ID) - Puede DELETEAR un miembro existente en el archivo PFMembers.json.
+    * Las respuestas JSON y XML están disponibles.
+2. ### Carga de Archivos - http://localhost:5002/api/upload
+    * POST (/) - Puedes POSTAR un nuevo ARCHIVO en la carpeta fileuploads.
+3. ### Descarga de archivos - http://localhost:5002/api/download?name=FileNameWithExtension
+    * GET (/) - Puede descargar un ARCHIVO. Por ejemplo, http://localhost:5002/api/download?name=Test.jpg
+4. ### Respuesta Retardada - http://localhost:5002/api/lag?delay=TimeInMilliSeconds
+    * Cambie TimeInMilliSeconds con el Valor Apropiado e.g. http://localhost:5002/api/lag?delay=3000 retrasaría la respuesta 3 Segundos
+5. ### Cabecera Obligatoria en la Petición - http://localhost:5002/api/sendheader
+    * Error si la cabecera channelName no está establecida en el Objeto de Petición.
+6. ### Vehículos - http://localhost:5002/api/vehicles
+    * GET ALL (/) - Esto devolverá todos los vehículos. 
+7. ### Autores - http://localhost:5002/api/authors
+    * GET ALL (/) - Esto devolverá todos los autores. 
+8. ### PASOS DE INSTALACIÓN
+      * Instalar node.js
+      * Instalar VS Code como IDE
+      * Instalar nodemon globalmente abriendo la terminal y ejecutando el siguiente comando : -.
          - **npm install nodemon -g**
-      * Download this project on to your system
-      * Open the Project in VS Code and in the integrated terminal of VS Code run the following command: -
+      * Descarga este proyecto en tu sistema
+      * Abra el proyecto en VS Code y en el terminal integrado de VS Code ejecute el siguiente comando: -
          - **npm install**
-      * To start the project type the following command in the integrated terminal of VS Code: -
+      * Para iniciar el proyecto escriba el siguiente comando en el terminal integrado de VS Code: -
          - **npm start**
-9. By default this project runs on PORT 5002; to change it kindly open app.js file and update the following line of code: -
+9. Por defecto este proyecto se ejecuta en el PUERTO 5002; para cambiarlo abra amablemente el archivo app.js y actualice la siguiente línea de código: -
     - **const PORT = process.env.PORT || 5002**
-10. This project has basic authentication in place. So, the hit the endpoints you have to provide the username and password.
-    - **username = admin**
-    - **password = admin**
+10. Este proyecto tiene autenticación básica en su lugar. Así que, para acceder a los endpoints tienes que proporcionar el nombre de usuario y la contraseña.
+    - Nombre de usuario = admin
+    - Contraseña = admin
